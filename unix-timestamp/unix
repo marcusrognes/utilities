@@ -1,0 +1,16 @@
+#!/usr/bin/php
+<?php
+
+if ( ! isset( $argv[1] ) ) {
+	echo "Unix timestamp needs to be passed!\n";
+	exit(0);
+}
+
+if ( ! $argv[1] ) {
+	echo "Unix timestamp needs to be passed!\n";
+	exit(0);
+}
+
+$timeStamp = $argv[1];
+echo @date( 'Y-m-d H:i:s', intval( $timeStamp ) ) . "\n";
+exit();
